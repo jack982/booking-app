@@ -13,7 +13,7 @@ import {NoResultComponent} from './no-result.component';
 import {SharedModule} from '../../shared/shared.module';
 import {SearchComponent} from './search.component';
 import {FormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
+import {SearchRoutingModule} from './search-routing.module';
 
 const components = [
   SearchComponent,
@@ -39,8 +39,8 @@ const components = [
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule,
-    SharedModule
+    SharedModule,
+    SearchRoutingModule
   ]
 })
 export class SearchModule { }

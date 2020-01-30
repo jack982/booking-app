@@ -1,11 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
-import {NgForm} from '@angular/forms';
 import {Hotel, Room} from '../../model/hotel';
 import {CartService} from '../../core/services/cart.service';
-import {Contact} from "../../model/contact";
-import {Router} from "@angular/router";
+import {Contact} from '../../model/contact';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -39,7 +38,7 @@ export class SearchComponent implements OnInit {
         this.http.get<Hotel[]>(`${environment.API_HOTELS_URL}?q=${q}`)
         .subscribe(res => {
           if (!res.length) {
-            this.router.navigateByUrl('no-results');
+            this.router.navigateByUrl('search/no-results');
             return;
           }
           this.hotels = res;

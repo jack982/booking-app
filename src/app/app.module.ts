@@ -5,9 +5,6 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {CoreModule} from './core/core.module';
-import {LoginModule} from './features/login/login.module';
-import {CartModule} from './features/cart/cart.module';
-import {SearchModule} from './features/search/search.module';
 
 @NgModule({
   declarations: [
@@ -20,9 +17,6 @@ import {SearchModule} from './features/search/search.module';
     HttpClientModule,
    // SharedModule,
     CoreModule,
-    CartModule,
-    LoginModule,
-    SearchModule
   ],
   providers: [],
   bootstrap: [AppComponent]
